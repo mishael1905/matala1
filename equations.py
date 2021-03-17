@@ -22,7 +22,7 @@ def hezka(x:float,i:float):
 
     
 
-def expo(x:float):
+def exponent(x:float):
     i=1
     sum=0
     while(i<100):
@@ -33,11 +33,11 @@ def expo(x:float):
   
  
     
-def ln(x):
+def Ln(x):
     i=0
     sum=0
     while i<1000:
-        sum=sum+ 2*((x-expo(sum))/(x+expo(sum)))   
+        sum=sum+ 2*((x-exponent(sum))/(x+exponent(sum)))   
         i=i+1
     result = float('%0.6f' % sum)
     return(result)
@@ -47,9 +47,9 @@ def ln(x):
 def XtimesY(x,y):
     if(x<=0):
         return(0)
-    z1=ln(x)
+    z1=Ln(x)
     z2=y*z1
-    a = expo(z2)
+    a = exponent(z2)
     result = float('%0.6f' % a)
     return(result)
   
@@ -61,6 +61,6 @@ def sqrt(y,x):
 def calculate(x:float)->float:
     if(x==0):
         return(0)
-    ex=((expo(x))*(expo(x*ln(7)))*(1/x)*(sqrt(x, x)))
+    ex=((exponent(x))*(exponent(x*Ln(7)))*(1/x)*(sqrt(x, x)))
     result = float('%0.6f' % ex)
     return(result)
