@@ -28,7 +28,10 @@ def expo(x:float):
     while(i<100):
         sum=sum+((hezka(x,i)/atzeret(i)))
         i=i+1
-    return(sum+1)
+    result = float('%0.6f' % sum)
+    return(result+1)
+  
+ 
     
 def ln(x):
     i=0
@@ -36,7 +39,10 @@ def ln(x):
     while i<1000:
         sum=sum+ 2*((x-expo(sum))/(x+expo(sum)))   
         i=i+1
-    return(sum)
+    result = float('%0.6f' % sum)
+    return(result)
+  
+   
     
 def XtimesY(x,y):
     if(x<=0):
@@ -49,10 +55,12 @@ def XtimesY(x,y):
   
 
 def sqrt(y,x):
-    return(XtimesY(y,1/x))
+    return(XtimesY(x,1/y))
     
         
 def calculate(x:float)->float:
+    if(x==0):
+        return(0)
     ex=((expo(x))*(expo(x*ln(7)))*(1/x)*(sqrt(x, x)))
     result = float('%0.6f' % ex)
     return(result)
